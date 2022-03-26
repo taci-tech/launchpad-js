@@ -1,0 +1,43 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    "block-spacing": [
+      "error",
+      "always"
+    ],
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "quote-props": "off",
+    "max-len": "off",
+    "quotes": "off",
+    "curly": "off",
+    "no-const-assign": "error",
+    "no-irregular-whitespace": "error",
+    "spaced-comment": "error",
+    "space-before-blocks": "error",
+    "no-whitespace-before-property": "error",
+    "arrow-spacing": "error",
+    "indent": ["error", 4, {
+      "VariableDeclarator": 0, "SwitchCase": 1
+    }]
+  }
+}
