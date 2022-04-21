@@ -239,7 +239,7 @@ function useLPSession<ValType>(
 
     return {
         data: sessionStateValue,
-        setData: (newValue?: any) => {
+        setParam: (newValue?: any) => {
             setSessionExposedSetter(newValue);
         },
         isLoading: sessionIsLoading,
