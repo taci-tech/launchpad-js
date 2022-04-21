@@ -27,15 +27,28 @@ class RMCore {
         path: string,
         config: RMConfig
     ) {
+        let domain = LPConfiguration.server;
+
         if (path.length === 0) {
             path = "/";
         }
-        if (path.charAt(0) !== '/') {
-            path = '/' + path;
+
+        if (path.charAt(0) !== "/") {
+            if (path.indexOf("http") === 0) {
+                if (path.indexOf("/", 8) === -1) {
+                    domain = path;
+                    path = "";
+                } else {
+                    domain = path.substring(0, path.indexOf("/", 8));
+                    path = path.substring(path.indexOf("/", 8));
+                }
+            } else {
+                path = "/" + path;
+            }
         }
 
         // Generate the url based on the path and the config server url.
-        this.url = LPConfiguration.server + path;
+        this.url = domain + path;
 
         this.method = method;
         this.header = {
