@@ -1,6 +1,6 @@
 {
   "name": "@taci-tech/launchpad-js",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A modern front-end proxy for everyone.",
   "main": "lib/index.js",
   "module": "lib/index.js",
@@ -18,7 +18,7 @@
   "author": "",
   "license": "ISC",
   "peerDependencies": {
-    "react": "^17.0.2"
+    "react": ">=17.0.0"
   },
   "devDependencies": {
     "@types/jest": "^27.4.0",
